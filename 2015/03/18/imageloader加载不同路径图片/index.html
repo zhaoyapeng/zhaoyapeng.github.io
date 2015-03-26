@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Android Studio build.gradle文件(1) | 天晴,雨依旧</title>
+  <title>imageloader加载不同路径图片 | 天晴,雨依旧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="工程/App/路径下的build.gradle">
+  <meta name="description" content="ImageLoader出网络图片外，还可记载不本地，drawable等路径的图片">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Studio build.gradle文件(1)">
-<meta property="og:url" content="http://yoursite.com/2014/12/29/Android-Studio-build-gradle文件/">
+<meta property="og:title" content="imageloader加载不同路径图片">
+<meta property="og:url" content="http://yoursite.com/2015/03/18/imageloader加载不同路径图片/">
 <meta property="og:site_name" content="天晴,雨依旧">
-<meta property="og:description" content="工程/App/路径下的build.gradle">
+<meta property="og:description" content="ImageLoader出网络图片外，还可记载不本地，drawable等路径的图片">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Studio build.gradle文件(1)">
-<meta name="twitter:description" content="工程/App/路径下的build.gradle">
+<meta name="twitter:title" content="imageloader加载不同路径图片">
+<meta name="twitter:description" content="ImageLoader出网络图片外，还可记载不本地，drawable等路径的图片">
 
   
     <link rel="alternative" href="/atom.xml" title="天晴,雨依旧" type="application/atom+xml">
@@ -61,10 +61,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Android-Studio-build-gradle文件" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-imageloader加载不同路径图片" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/12/29/Android-Studio-build-gradle文件/" class="article-date">
-  <time datetime="2014-12-29T09:17:58.000Z" itemprop="datePublished">Dec 29 2014</time>
+    <a href="/2015/03/18/imageloader加载不同路径图片/" class="article-date">
+  <time datetime="2015-03-18T07:29:57.000Z" itemprop="datePublished">Mar 18 2015</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android Studio build.gradle文件(1)
+      imageloader加载不同路径图片
     </h1>
   
 
@@ -83,17 +83,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>工程/App/路径下的build.gradle<br><a id="more"></a></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">// 声名应用程序为android 程序</span></div><div class="line">apply plugin: <span class="string">'com.android.application'</span></div><div class="line"></div><div class="line">android {</div><div class="line">    <span class="comment">// 编译SDK的版本</span></div><div class="line">    compileSdkVersion <span class="number">21</span></div><div class="line">    <span class="comment">// build tools 的版本</span></div><div class="line">    buildToolsVersion <span class="string">"21.1.2"</span></div><div class="line"></div><div class="line">    defaultConfig {</div><div class="line">        <span class="comment">// 工程的包名</span></div><div class="line">        applicationId <span class="string">"com.example.mrj.zhaoyapeng"</span></div><div class="line">        <span class="comment">// 最小的SDK版本</span></div><div class="line">        minSdkVersion <span class="number">16</span></div><div class="line">        <span class="comment">// 系统版本如果小于targetSdkVersion，系统会做一些兼容性的处理</span></div><div class="line">        targetSdkVersion <span class="number">18</span></div><div class="line">        <span class="comment">// 应用市场 用以识别版本（使用者不可见）</span></div><div class="line">        versionCode <span class="number">1</span></div><div class="line">        <span class="comment">// 给消费者展示的应用版本 （使用者可见）</span></div><div class="line">        versionName <span class="string">"1.0"</span></div><div class="line">    }</div><div class="line">    buildTypes {</div><div class="line">        release {</div><div class="line">            <span class="comment">// 是否进行混淆</span></div><div class="line">            minifyEnabled <span class="keyword">false</span></div><div class="line">            <span class="comment">// 混淆文件的位置</span></div><div class="line">            proguardFiles getDefaultProguardFile(<span class="string">'proguard-android.txt'</span>), <span class="string">'proguard-rules.pro'</span></div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">dependencies</span> {</div><div class="line">    <span class="comment">// 编译 libs 文件夹下的所有jar包</span></div><div class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(dir: <span class="string">'libs'</span>, <span class="keyword">include</span>: [<span class="string">'*.jar'</span>])</div><div class="line">    <span class="comment">// 编译com.android.support:appcompat-v7:21.0.3</span></div><div class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:appcompat-v7:21.0.3'</span></div><div class="line">}</div></pre></td></tr></table></figure>
+        <p> ImageLoader出网络图片外，还可记载不本地，drawable等路径的图片<br> <a id="more"></a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="constant">String imageUri</span> = <span class="string">"http://site.com/image.png"</span>; <span class="comment">// 网络图片  </span></div><div class="line"><span class="constant">String imageUri</span> = <span class="string">"file:///mnt/sdcard/image.png"</span>; <span class="comment">//SD卡图片  </span></div><div class="line"><span class="constant">String imageUri</span> = <span class="string">"content://media/external/audio/albumart/13"</span>; <span class="comment">// 媒体文件夹  </span></div><div class="line"><span class="constant">String imageUri</span> = <span class="string">"assets://image.png"</span>; <span class="comment">// assets  </span></div><div class="line"><span class="constant">String imageUri</span> = <span class="string">"drawable://"</span> + R.drawable.image; <span class="comment">//  drawable文件</span></div></pre></td></tr></table></figure>
+
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/12/29/Android-Studio-build-gradle文件/" data-id="a6i5cih4fnqnzjjb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/18/imageloader加载不同路径图片/" data-id="fe83g4b1cbd05404" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ImageLoader/">ImageLoader</a></li></ul>
 
     </footer>
   </div>
@@ -101,19 +102,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2014/12/30/android-studio-常用快捷键/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/03/26/安装nginx遇到的问题/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          android studio 常用快捷键
+          安装nginx遇到的问题
         
       </div>
     </a>
   
   
-    <a href="/2014/12/27/exlipse项目转换为gradle项目/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/01/28/java-lang-IllegalStateException-Cannot-add-header-view-to-list-setAdapter-has-already-been-called-错误/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">exlipse项目转换为gradle项目</div>
+      <div class="article-nav-title">java.lang.IllegalStateException: Cannot add header view to list -- setAdapter has already been called.错误</div>
     </a>
   
 </nav>
