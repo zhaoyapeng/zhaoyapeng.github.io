@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | 天晴,雨依旧</title>
+  <title>部署域名 | 天晴,雨依旧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天晴,雨依旧">
-<meta property="og:url" content="http://yoursite.com/archives/2014/">
+  <meta name="description" content="1》使用cd命令进入 /etc/nginx/sites-enabled/目录下
+2》在sites-enabled/目录下创建配置文件 例如 ：zhao.yapeng.com.conf 内容如下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部署域名">
+<meta property="og:url" content="http://yoursite.com/2015/03/27/部署域名/">
 <meta property="og:site_name" content="天晴,雨依旧">
-<meta property="og:description">
+<meta property="og:description" content="1》使用cd命令进入 /etc/nginx/sites-enabled/目录下
+2》在sites-enabled/目录下创建配置文件 例如 ：zhao.yapeng.com.conf 内容如下">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天晴,雨依旧">
-<meta name="twitter:description">
+<meta name="twitter:title" content="部署域名">
+<meta name="twitter:description" content="1》使用cd命令进入 /etc/nginx/sites-enabled/目录下
+2》在sites-enabled/目录下创建配置文件 例如 ：zhao.yapeng.com.conf 内容如下">
 
   
     <link rel="alternative" href="/atom.xml" title="天晴,雨依旧" type="application/atom+xml">
@@ -61,134 +64,57 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/12/30/gradle-打渠道包/" class="archive-article-date">
-  <time datetime="2014-12-30T12:30:36.000Z" itemprop="datePublished">Dec 30</time>
+        <section id="main"><article id="post-部署域名" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/27/部署域名/" class="article-date">
+  <time datetime="2015-03-27T08:34:13.000Z" itemprop="datePublished">Mar 27 2015</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/30/gradle-打渠道包/">gradle 打渠道包</a>
+    <h1 class="article-title" itemprop="name">
+      部署域名
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/12/30/android-studio-打签名包/" class="archive-article-date">
-  <time datetime="2014-12-30T07:38:12.000Z" itemprop="datePublished">Dec 30</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/30/android-studio-打签名包/">android studio 打签名包</a>
-    </h1>
-  
+        <p>1》使用cd命令进入 /etc/nginx/sites-enabled/目录下</p>
+<p>2》在sites-enabled/目录下创建配置文件 例如 ：zhao.yapeng.com.conf 内容如下<br> <a id="more"></a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="title">server</span> {</div><div class="line">    <span class="title">listen</span> <span class="number">0.0.0.0:80</span>;</div><div class="line"></div><div class="line">    <span class="title">client_max_body_size</span> <span class="number">10m</span>;</div><div class="line"></div><div class="line">    <span class="title">server_name</span> zhao.yapeng.com;</div><div class="line"></div><div class="line">    <span class="title">location</span> / {</div><div class="line">        <span class="title">proxy_pass</span> <span class="url">http://localhost:4000</span>;</div><div class="line"></div><div class="line">    }</div><div class="line"> }</div></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/12/30/android-studio-常用快捷键/" class="archive-article-date">
-  <time datetime="2014-12-30T02:41:04.000Z" itemprop="datePublished">Dec 30</time>
-</a>
+<p> 其中zhao.yapeng.com 为域名</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/30/android-studio-常用快捷键/">android studio 常用快捷键</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/12/29/Android-Studio-build-gradle文件/" class="archive-article-date">
-  <time datetime="2014-12-29T09:17:58.000Z" itemprop="datePublished">Dec 29</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/27/部署域名/" data-id="dnni4rrtw1ka4gdc" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/29/Android-Studio-build-gradle文件/">Android Studio build.gradle文件(1)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/12/27/exlipse项目转换为gradle项目/" class="archive-article-date">
-  <time datetime="2014-12-27T15:28:56.000Z" itemprop="datePublished">Dec 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/27/exlipse项目转换为gradle项目/">exlipse项目转换为gradle项目</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/12/27/hexo初使用/" class="archive-article-date">
-  <time datetime="2014-12-27T13:49:36.000Z" itemprop="datePublished">Dec 27</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/27/hexo初使用/">hexo初使用</a>
-    </h1>
   
+    <a href="/2015/03/27/Ubuntu创建用户/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ubuntu创建用户</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">
