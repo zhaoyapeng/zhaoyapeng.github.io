@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/3 | 天晴,雨依旧</title>
+  <title>使用rsync发布HTML数据到服务器端 | 天晴,雨依旧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天晴,雨依旧">
-<meta property="og:url" content="http://yoursite.com/archives/2015/03/">
+  <meta name="description" content="原文地址：http://blog.shiqichan.com/Rsync-Without-Password/编写HTML网页，想立即让别人看到，需要发布到服务器端。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用rsync发布HTML数据到服务器端">
+<meta property="og:url" content="http://yoursite.com/2015/04/03/使用rsync发布HTML数据到服务器端/">
 <meta property="og:site_name" content="天晴,雨依旧">
-<meta property="og:description">
+<meta property="og:description" content="原文地址：http://blog.shiqichan.com/Rsync-Without-Password/编写HTML网页，想立即让别人看到，需要发布到服务器端。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天晴,雨依旧">
-<meta name="twitter:description">
+<meta name="twitter:title" content="使用rsync发布HTML数据到服务器端">
+<meta name="twitter:description" content="原文地址：http://blog.shiqichan.com/Rsync-Without-Password/编写HTML网页，想立即让别人看到，需要发布到服务器端。">
 
   
     <link rel="alternative" href="/atom.xml" title="天晴,雨依旧" type="application/atom+xml">
@@ -61,115 +61,53 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/27/node代码保持一直运行/" class="archive-article-date">
-  <time datetime="2015-03-27T09:03:10.000Z" itemprop="datePublished">Mar 27</time>
+        <section id="main"><article id="post-使用rsync发布HTML数据到服务器端" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/03/使用rsync发布HTML数据到服务器端/" class="article-date">
+  <time datetime="2015-04-03T06:16:36.000Z" itemprop="datePublished">Apr 3 2015</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/27/node代码保持一直运行/">node代码保持一直在后台运行</a>
+    <h1 class="article-title" itemprop="name">
+      使用rsync发布HTML数据到服务器端
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/27/部署域名/" class="archive-article-date">
-  <time datetime="2015-03-27T08:34:13.000Z" itemprop="datePublished">Mar 27</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/27/部署域名/">部署域名</a>
-    </h1>
-  
+        <p>原文地址：<a href="http://blog.shiqichan.com/Rsync-Without-Password/" target="_blank" rel="external">http://blog.shiqichan.com/Rsync-Without-Password/</a><br>编写HTML网页，想立即让别人看到，需要发布到服务器端。<br><a id="more"></a><br>以下介绍一个简易的方案。<br>首先，在这个服务器上要开个专门的帐号，比如zhangsan。<br>然后，需要配置比如Nginx服务器，指向到服务器上的某个目录（比如指定用户的目录/home/zhangsan/site），并对应到某个指定的域名上，比如<a href="http://www.mysite.com。这里不详细说了，可查阅Nginx手册配置。" target="_blank" rel="external">http://www.mysite.com。这里不详细说了，可查阅Nginx手册配置。</a><br>下面，要用rsync将本地指定目录的文件同步到该服务器上的指定目录，比如/home/zhangsan/site。如果使用Linux或者Mac，都是自带rsync命令的。我使用的Mac下的。<br>现在，比如我要将本地/data/www同步到服务器的/home/zhangsan/site/www目录下：<br>1<br>rsync -a /data/www zhangsan@www.mysite.com:/home/zhangsan/site<br>这样有个问题，每次同步的时候，都需要输入密码。<br>可以通过下面的办法，在服务器保存客户端本地用户的key，这样以后就不必输入密码，通过key直接访问了。<br>这个方法，让SSH登录不再需要密码，因为rsync是基于SSH的，所以也有效。<br>安装ssh-copy-id:<br>1<br>curl -L <a href="https://raw.githubusercontent.com/beautifulcode/ssh-copy-id-for-OSX/master/install.sh" target="_blank" rel="external">https://raw.githubusercontent.com/beautifulcode/ssh-copy-id-for-OSX/master/install.sh</a> | sh<br>运行过程需要输入管理员密码。<br>安装后，就可以运行：<br>1<br>ssh-copy-id -i ~/.ssh/id_rsa.pub zhangsan@www.mysite.com<br>如果没有生成过id_rsa，需要生成一个。<br>这步做好了，就可以免密码rsync了。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/27/Ubuntu创建用户/" class="archive-article-date">
-  <time datetime="2015-03-27T08:23:51.000Z" itemprop="datePublished">Mar 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/27/Ubuntu创建用户/">Ubuntu创建用户</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/26/安装nginx遇到的问题/" class="archive-article-date">
-  <time datetime="2015-03-26T12:36:40.000Z" itemprop="datePublished">Mar 26</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/03/使用rsync发布HTML数据到服务器端/" data-id="djdlu276wk8zo9c4" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/26/安装nginx遇到的问题/">安装nginx遇到的问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/18/imageloader加载不同路径图片/" class="archive-article-date">
-  <time datetime="2015-03-18T07:29:57.000Z" itemprop="datePublished">Mar 18</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/18/imageloader加载不同路径图片/">imageloader加载不同路径图片</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/04/03/进入Docker容器进程及如何退出/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">进入Docker容器进程及如何退出</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

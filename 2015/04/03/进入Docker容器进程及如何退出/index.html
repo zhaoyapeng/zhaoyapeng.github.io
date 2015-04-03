@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/3 | 天晴,雨依旧</title>
+  <title>进入Docker容器进程及如何退出 | 天晴,雨依旧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天晴,雨依旧">
-<meta property="og:url" content="http://yoursite.com/archives/2015/03/">
+  <meta name="description" content="原文地址：http://blog.shiqichan.com/How-to-attach-and-detach-from-Docker-s-process/如果启动了Docker容器，比如这样：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进入Docker容器进程及如何退出">
+<meta property="og:url" content="http://yoursite.com/2015/04/03/进入Docker容器进程及如何退出/">
 <meta property="og:site_name" content="天晴,雨依旧">
-<meta property="og:description">
+<meta property="og:description" content="原文地址：http://blog.shiqichan.com/How-to-attach-and-detach-from-Docker-s-process/如果启动了Docker容器，比如这样：">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天晴,雨依旧">
-<meta name="twitter:description">
+<meta name="twitter:title" content="进入Docker容器进程及如何退出">
+<meta name="twitter:description" content="原文地址：http://blog.shiqichan.com/How-to-attach-and-detach-from-Docker-s-process/如果启动了Docker容器，比如这样：">
 
   
     <link rel="alternative" href="/atom.xml" title="天晴,雨依旧" type="application/atom+xml">
@@ -61,115 +61,62 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/27/node代码保持一直运行/" class="archive-article-date">
-  <time datetime="2015-03-27T09:03:10.000Z" itemprop="datePublished">Mar 27</time>
+        <section id="main"><article id="post-进入Docker容器进程及如何退出" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/03/进入Docker容器进程及如何退出/" class="article-date">
+  <time datetime="2015-04-03T06:11:53.000Z" itemprop="datePublished">Apr 3 2015</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/27/node代码保持一直运行/">node代码保持一直在后台运行</a>
+    <h1 class="article-title" itemprop="name">
+      进入Docker容器进程及如何退出
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/27/部署域名/" class="archive-article-date">
-  <time datetime="2015-03-27T08:34:13.000Z" itemprop="datePublished">Mar 27</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/27/部署域名/">部署域名</a>
-    </h1>
-  
+        <p>原文地址：<a href="http://blog.shiqichan.com/How-to-attach-and-detach-from-Docker-s-process/" target="_blank" rel="external">http://blog.shiqichan.com/How-to-attach-and-detach-from-Docker-s-process/</a><br>如果启动了Docker容器，比如这样：<br><a id="more"></a><br>1<br>docker run -itd -p 3000:3000 —name my-web -v “$(pwd)”:/webapp -w /webapp node npm start<br>我启动了一个Node Web App。<br>如何看到终端打印的报错和日志呢？<br>docker有命令可以让你进入（attach）和退出（detach）该进程。<br>进入：<br>1<br>docker attach my-web<br>退出，一定不要用ctrl+c，那样就是让docker容器停止了。<br>要用如下快捷键：<br>先按，ctrl+p<br>再按，ctrl+q<br>OK，试试吧。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/27/Ubuntu创建用户/" class="archive-article-date">
-  <time datetime="2015-03-27T08:23:51.000Z" itemprop="datePublished">Mar 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/27/Ubuntu创建用户/">Ubuntu创建用户</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/26/安装nginx遇到的问题/" class="archive-article-date">
-  <time datetime="2015-03-26T12:36:40.000Z" itemprop="datePublished">Mar 26</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/03/进入Docker容器进程及如何退出/" data-id="k6w43pv07nvsrm9s" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/26/安装nginx遇到的问题/">安装nginx遇到的问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/03/18/imageloader加载不同路径图片/" class="archive-article-date">
-  <time datetime="2015-03-18T07:29:57.000Z" itemprop="datePublished">Mar 18</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/18/imageloader加载不同路径图片/">imageloader加载不同路径图片</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/04/03/使用rsync发布HTML数据到服务器端/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用rsync发布HTML数据到服务器端
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/04/02/一些git常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一些git常用命令</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">
