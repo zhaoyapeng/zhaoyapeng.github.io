@@ -3,23 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ubuntu创建用户 | 天晴,雨依旧</title>
+  <title>远程服务器拷贝 | 天晴,雨依旧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="创建新用户：
- useradd - m zhaoyapeng      -添加用户名为 zhaoyapeng 的用户
- passwd  zhaoyapeng             -为用户名为zhaoyapeng的用户添加密码">
+  <meta name="description" content="首先将要拷贝的目录打包，执行tar -zcvf zhao.tar.gz zhyp_dir/  （zhyp_dir）是目录名 ,此时会在zhaoyp_dir目录下生成zhao.tart.gz文件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu创建用户">
-<meta property="og:url" content="http://yoursite.com/2015/03/27/Ubuntu创建用户/">
+<meta property="og:title" content="远程服务器拷贝">
+<meta property="og:url" content="http://yoursite.com/2015/04/08/远程服务器拷贝/">
 <meta property="og:site_name" content="天晴,雨依旧">
-<meta property="og:description" content="创建新用户：
- useradd - m zhaoyapeng      -添加用户名为 zhaoyapeng 的用户
- passwd  zhaoyapeng             -为用户名为zhaoyapeng的用户添加密码">
+<meta property="og:description" content="首先将要拷贝的目录打包，执行tar -zcvf zhao.tar.gz zhyp_dir/  （zhyp_dir）是目录名 ,此时会在zhaoyp_dir目录下生成zhao.tart.gz文件">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu创建用户">
-<meta name="twitter:description" content="创建新用户：
- useradd - m zhaoyapeng      -添加用户名为 zhaoyapeng 的用户
- passwd  zhaoyapeng             -为用户名为zhaoyapeng的用户添加密码">
+<meta name="twitter:title" content="远程服务器拷贝">
+<meta name="twitter:description" content="首先将要拷贝的目录打包，执行tar -zcvf zhao.tar.gz zhyp_dir/  （zhyp_dir）是目录名 ,此时会在zhaoyp_dir目录下生成zhao.tart.gz文件">
 
   
     <link rel="alternative" href="/atom.xml" title="天晴,雨依旧" type="application/atom+xml">
@@ -67,10 +61,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Ubuntu创建用户" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-远程服务器拷贝" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/03/27/Ubuntu创建用户/" class="article-date">
-  <time datetime="2015-03-27T08:23:51.000Z" itemprop="datePublished">Mar 27 2015</time>
+    <a href="/2015/04/08/远程服务器拷贝/" class="article-date">
+  <time datetime="2015-04-08T02:25:40.000Z" itemprop="datePublished">Apr 8 2015</time>
 </a>
     
   </div>
@@ -81,7 +75,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Ubuntu创建用户
+      远程服务器拷贝
     </h1>
   
 
@@ -89,18 +83,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="创建新用户：">创建新用户：</h1>
-<p> useradd - m zhaoyapeng      -添加用户名为 zhaoyapeng 的用户</p>
-<p> passwd  zhaoyapeng             -为用户名为zhaoyapeng的用户添加密码<br> <a id="more"></a><br> usermod -a -G sudo zhaoyapeng   -将用户名为zhaoyapeng的用户添加进sudo组</p>
-<p> chsh -s /bin/bash zhaoyapeng  </p>
-<h1 id="删除用户：">删除用户：</h1>
-<p> userdel -r zhaoyapeng   删除用户名为zhaoyapeng的用户</p>
-<p> 此时可能会error：zhaoyapeng is currently used by process 9999<br> 解决办法：执行 kill - 9 -9999 ，再次执行 usderdel - r zhaoyapeng 删除用户成功</p>
+        <p>   首先将要拷贝的目录打包，执行tar -zcvf zhao.tar.gz zhyp_dir/  （zhyp_dir）是目录名 ,此时会在zhaoyp_dir目录下生成zhao.tart.gz文件<br>   <a id="more"></a><br>   打包成功之后，直接执行scp  zhaoyp@www.zhaoyp.com:/zhaoyp/zhao.tar.gz(远程压缩文件的路径)  /Users/zhaoyp/(本地目录，会将远程拷贝的压缩文件下载到此路径)</p>
+<p>   解压的命令是tar zxvf zhao.tar.gz</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/27/Ubuntu创建用户/" data-id="lnk1qdyeeehfxnt7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/08/远程服务器拷贝/" data-id="m4fq7u5p0eq78enf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -109,19 +98,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/27/部署域名/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          部署域名
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/03/26/安装nginx遇到的问题/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/04/07/docker常用命令/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">安装nginx遇到的问题</div>
+      <div class="article-nav-title">docker常用命令</div>
     </a>
   
 </nav>
